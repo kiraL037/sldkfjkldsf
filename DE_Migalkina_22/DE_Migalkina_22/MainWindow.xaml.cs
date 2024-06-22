@@ -20,9 +20,15 @@ namespace DE_Migalkina_22
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string connectionString = "";
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            s
         }
     }
 }
