@@ -1,0 +1,19 @@
+﻿<Window x:Class="ThesisProject.FirstSetupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThesisProject"
+        mc:Ignorable="d"
+        Title="FirstSetupWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="ServerTextBox" Width="200" Margin="10" Text="Сервер" Foreground="Gray" GotFocus="ServerTextBox_GotFocus" LostFocus="ServerTextBox_LostFocus"/>
+            <TextBox x:Name="DatabaseTextBox" Width="200" Margin="10" Text="База данных" Foreground="Gray" GotFocus="DatabaseTextBox_GotFocus" LostFocus="DatabaseTextBox_LostFocus"/>
+            <TextBox x:Name="UsernameTextBox" Width="200" Margin="10" Text="Имя пользователя" Foreground="Gray" GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus"/>
+            <PasswordBox x:Name="PasswordBox" Width="200" Margin="10" Tag="Пароль" Foreground="Gray" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus"/>
+            <PasswordBox x:Name="ConfirmPasswordBox" Width="200" Margin="10" Tag="Подтвердите пароль" Foreground="Gray" GotFocus="ConfirmPasswordBox_GotFocus" LostFocus="ConfirmPasswordBox_LostFocus"/>
+            <Button Content="Завершить настройку" Click="FinishSetupButton_Click" Width="200" Margin="10"/>
+            </StackPanel>
+    </Grid>
+</Window>

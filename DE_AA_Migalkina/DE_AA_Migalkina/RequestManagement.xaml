@@ -1,0 +1,23 @@
+﻿<Window x:Class="DE_AA_Migalkina.RequestManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DE_AA_Migalkina"
+        mc:Ignorable="d"
+        Title="RequestManagement" Height="450" Width="800">
+    <Grid>
+        <ListView Name="lvRequests" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер заявки" DisplayMemberBinding="{Binding RequestNumber}" Width="100"/>
+                    <GridViewColumn Header="Дата добавления" DisplayMemberBinding="{Binding RequestDate}" Width="150"/>
+                    <GridViewColumn Header="Оборудование" DisplayMemberBinding="{Binding Equipment}" Width="150"/>
+                    <GridViewColumn Header="Тип неисправности" DisplayMemberBinding="{Binding IssueType}" Width="150"/>
+                    <GridViewColumn Header="Клиент" DisplayMemberBinding="{Binding Client}" Width="150"/>
+                    <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding Status}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

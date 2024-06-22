@@ -1,0 +1,35 @@
+﻿<Window x:Class="DataAnalytics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:DataAnalytics"
+        mc:Ignorable="d"
+        Title="Data Analytics Tool" Height="600" Width="1000"
+        d:DataContext="{d:DesignInstance Type=local:MainWindow, IsDesignTimeCreatable=True}">
+
+    <Grid Margin="20">
+        <StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Загрузить файл" Height="42" Click="LoadFileButton_ClickAsync" Style="{StaticResource PrimaryButton}" Margin="10,0,0,10" VerticalAlignment="Center"/>
+                <Button Content="Провести анализ" Height="42" Click="AnalyzeButton_Click" Style="{StaticResource PrimaryButton}" Margin="10,0,0,10"/>
+                <Button Content="Провести регрессионный анализ" Height="42" Click="RunRegressionAnalysisButton_Click" Style="{StaticResource PrimaryButton}" Margin="10,0,0,10"/>
+                <ProgressBar x:Name="progressBar" Style="{StaticResource ProgressBarStyle}" Width="200" Height="20" Margin="0,10,0,10" Visibility="Hidden"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Style="{StaticResource InstructionText}" Text="Выберите столбцы для проведения анализа: " Margin="10,0,0,0"/>
+                <ComboBox x:Name="xAxisComboBox" Width="120" Height="30" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                <ComboBox x:Name="yAxisComboBox" Width="120" Height="30" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button Content="Открыть диаграмму" Width="150" Height="30" Click="OpenVisualizationButton_Click" Margin="10,0,0,0"/>
+                <TextBlock x:Name="resultTextBlock" Style="{StaticResource ResultText}" Width="470" Margin="0,0,0,0"  HorizontalAlignment="Right" />
+            </StackPanel>
+
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Height="401" Margin="0,10,0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>

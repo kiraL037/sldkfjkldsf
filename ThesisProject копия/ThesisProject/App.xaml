@@ -1,0 +1,57 @@
+﻿<Application x:Class="ThesisProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ThesisProject"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10,50"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="DarkSlateGray" ShadowDepth="2" BlurRadius="5"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#BDBDBD"/>
+                    <Setter Property="Foreground" Value="WhiteSmoke"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#9E9E9E"/>
+                    <Setter Property="Foreground" Value="WhiteSmoke"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="DarkSlateGray" ShadowDepth="2" BlurRadius="5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#E0E0E0"/>
+            <Setter Property="Foreground" Value="Black"/>
+            
+        </Style>
+
+        <Style x:Key="DataGridStyle" TargetType="DataGrid">
+            <Setter Property="AutoGenerateColumns" Value="True"/>
+        </Style>
+    </Application.Resources>
+</Application>

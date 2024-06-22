@@ -1,0 +1,30 @@
+﻿<Window x:Class="CourseProjectAAAAA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:CourseProjectAAAAA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,10,266,0" Grid.ColumnSpan="2">
+            <Button Content="Load Dataset" Click="LoadDataset_Click" Width="222" RenderTransformOrigin="0.506,1.555"/>
+            <Button Content="Initial Exploration" Click="InitialExploration_Click" Width="222"/>
+            <Button Content="Data Cleaning" Click="DataCleaning_Click" Width="222"/>
+            <Button Content="Feature Engineering" Click="FeatureEngineering_Click" Width="222"/>
+            <Button Content="Descriptive Statistics" Click="DescriptiveStatistics_Click" Width="222"/>
+            <Button Content="Visualizations" Click="Visualizations_Click" Width="222"/>
+            <Button Content="Save Cleaned Dataset" Click="SaveCleanedDataset_Click" Width="222"/>
+            <Button Content="Exit" Click="Exit_Click" Width="222"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="0,10,10,0">
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Width="528" Height="430" />
+        </StackPanel>
+    </Grid>
+</Window>

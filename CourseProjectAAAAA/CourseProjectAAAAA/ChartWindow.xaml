@@ -1,0 +1,31 @@
+﻿<Window x:Class="CourseProjectAAAAA.ChartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseProjectAAAAA" d:DataContext="{d:DesignInstance Type=local:ChartWindowViewModel}"
+        mc:Ignorable="d"
+        Title="ChartWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <lvc:CartesianChart Name="barChart" Margin="10" Grid.Column="0" DataContext="{Binding}">
+            <lvc:CartesianChart.Series>
+                <lvc:ColumnSeries Title="Orders by Category" 
+                                  Values="{Binding BarChartValues}" />
+            </lvc:CartesianChart.Series>
+        </lvc:CartesianChart>
+
+        <!-- PieChart -->
+        <lvc:PieChart Name="paymentMethodChart" Margin="10" Grid.Column="1" DataContext="{Binding}">
+            <lvc:PieChart.Series>
+                <lvc:PieSeries Title="Payment Methods" 
+                               Values="{Binding PieChartValues}" />
+            </lvc:PieChart.Series>
+        </lvc:PieChart>
+    </Grid>
+</Window>

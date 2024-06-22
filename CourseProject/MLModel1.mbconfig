@@ -1,0 +1,565 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\Анастас\\Downloads\\archive (1)\\sales_06_FY2020-21 copy.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "order_id",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "order_date",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "status",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "item_id",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "sku",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "qty_ordered",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "price",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "value",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "discount_amount",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "total",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "category",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "payment_method",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "bi_st",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "cust_id",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "year",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "month",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "ref_num",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Name Prefix",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "First Name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Middle Initial",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Last Name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Gender",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "age",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "full_name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "E Mail",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Customer Since",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "SSN",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Phone No.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Place Name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "County",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "City",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "State",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Zip",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Region",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "User Name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Discount_Percent",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.98155906266499615,
+        "RuntimeInSeconds": 336.334,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * e9 * e10 * e11 * e12 * e13 * e14 * e15 * e16 * e17 * e18 * e19 * e20 * e22",
+          "e0": {
+            "OutputColumnNames": [
+              "status",
+              "payment_method",
+              "bi_st",
+              "month",
+              "Gender",
+              "User Name"
+            ],
+            "InputColumnNames": [
+              "status",
+              "payment_method",
+              "bi_st",
+              "month",
+              "Gender",
+              "User Name"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "order_id",
+              "item_id",
+              "qty_ordered",
+              "price",
+              "discount_amount",
+              "total",
+              "cust_id",
+              "year",
+              "ref_num",
+              "age",
+              "Region"
+            ],
+            "InputColumnNames": [
+              "order_id",
+              "item_id",
+              "qty_ordered",
+              "price",
+              "discount_amount",
+              "total",
+              "cust_id",
+              "year",
+              "ref_num",
+              "age",
+              "Region"
+            ]
+          },
+          "e10": {
+            "InputColumnName": "E Mail",
+            "OutputColumnName": "E Mail"
+          },
+          "e11": {
+            "InputColumnName": "Customer Since",
+            "OutputColumnName": "Customer Since"
+          },
+          "e12": {
+            "InputColumnName": "SSN",
+            "OutputColumnName": "SSN"
+          },
+          "e13": {
+            "InputColumnName": "Phone No.",
+            "OutputColumnName": "Phone No."
+          },
+          "e14": {
+            "InputColumnName": "Place Name",
+            "OutputColumnName": "Place Name"
+          },
+          "e15": {
+            "InputColumnName": "County",
+            "OutputColumnName": "County"
+          },
+          "e16": {
+            "InputColumnName": "City",
+            "OutputColumnName": "City"
+          },
+          "e17": {
+            "InputColumnName": "State",
+            "OutputColumnName": "State"
+          },
+          "e18": {
+            "InputColumnName": "Zip",
+            "OutputColumnName": "Zip"
+          },
+          "e19": {
+            "InputColumnName": "Discount_Percent",
+            "OutputColumnName": "Discount_Percent"
+          },
+          "e2": {
+            "InputColumnName": "order_date",
+            "OutputColumnName": "order_date"
+          },
+          "e20": {
+            "InputColumnNames": [
+              "status",
+              "payment_method",
+              "bi_st",
+              "month",
+              "Gender",
+              "User Name",
+              "order_id",
+              "item_id",
+              "qty_ordered",
+              "price",
+              "discount_amount",
+              "total",
+              "cust_id",
+              "year",
+              "ref_num",
+              "age",
+              "Region",
+              "order_date",
+              "sku",
+              "category",
+              "Name Prefix",
+              "First Name",
+              "Middle Initial",
+              "Last Name",
+              "full_name",
+              "E Mail",
+              "Customer Since",
+              "SSN",
+              "Phone No.",
+              "Place Name",
+              "County",
+              "City",
+              "State",
+              "Zip",
+              "Discount_Percent"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e22": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "value",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "InputColumnName": "sku",
+            "OutputColumnName": "sku"
+          },
+          "e4": {
+            "InputColumnName": "category",
+            "OutputColumnName": "category"
+          },
+          "e5": {
+            "InputColumnName": "Name Prefix",
+            "OutputColumnName": "Name Prefix"
+          },
+          "e6": {
+            "InputColumnName": "First Name",
+            "OutputColumnName": "First Name"
+          },
+          "e7": {
+            "InputColumnName": "Middle Initial",
+            "OutputColumnName": "Middle Initial"
+          },
+          "e8": {
+            "InputColumnName": "Last Name",
+            "OutputColumnName": "Last Name"
+          },
+          "e9": {
+            "InputColumnName": "full_name",
+            "OutputColumnName": "full_name"
+          },
+          "e21": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "value",
+            "FeatureColumnName": "Features"
+          },
+          "e23": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "value",
+            "FeatureColumnName": "Features"
+          },
+          "e24": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "value",
+            "FeatureColumnName": "Features"
+          },
+          "e25": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "FeaturizeText",
+      "e3": "FeaturizeText",
+      "e4": "FeaturizeText",
+      "e5": "FeaturizeText",
+      "e6": "FeaturizeText",
+      "e7": "FeaturizeText",
+      "e8": "FeaturizeText",
+      "e9": "FeaturizeText",
+      "e10": "FeaturizeText",
+      "e11": "FeaturizeText",
+      "e12": "FeaturizeText",
+      "e13": "FeaturizeText",
+      "e14": "FeaturizeText",
+      "e15": "FeaturizeText",
+      "e16": "FeaturizeText",
+      "e17": "FeaturizeText",
+      "e18": "FeaturizeText",
+      "e19": "FeaturizeText",
+      "e20": "Concatenate",
+      "e21": "FastTreeRegression",
+      "e22": "FastForestRegression",
+      "e23": "LightGbmRegression",
+      "e24": "LbfgsPoissonRegressionRegression",
+      "e25": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * e9 * e10 * e11 * e12 * e13 * e14 * e15 * e16 * e17 * e18 * e19 * e20 * (e21 + e22 + e23 + e24 + e25)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\Анастас\\source\\repos\\CourseProject\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 600,
+    "LabelColumn": "value",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.2
+    }
+  }
+}

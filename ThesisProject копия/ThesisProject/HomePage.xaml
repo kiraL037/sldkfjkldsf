@@ -1,0 +1,22 @@
+﻿<Page x:Class="ThesisProject.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ThesisProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HomePage">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock TextWrapping="Wrap" Width="244" TextAlignment="Center" FontSize="36" Margin="0,100,0,5" Height="50"><Run Language="ru-ru" Text="Приветствую!"/></TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" Text="Для начала работы войдите в приложение" TextAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,5"/>
+            <StackPanel Height="100" Width="244" Margin="0,20,0,10">
+                <Button x:Name="AuthWindow" Content="Войти в систему" Click="AuthWindow_Button_Click" FontSize="20" Margin="0,5,0,10"/>
+                <Button x:Name="AuthWindow_Копировать" Content="Создать учетную запись" Click="AuthWindow_Button_Click" FontSize="20" Margin="0,5,0,10"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
